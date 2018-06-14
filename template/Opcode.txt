@@ -1,0 +1,8 @@
+namespace ETHotfix
+{
+	public static partial class {{message_type}}Opcode
+	{ {% for sh in sheet %}
+		 public const ushort {{sh|get_action_fullname}} = {{sh[0]|int*10}};{% if sh[6]|int ==1 %}
+		 public const ushort {{sh|get_action_fullname(1)}} = {{sh[0]|int*10+1}};{% endif %}{% endfor %}
+	}
+}

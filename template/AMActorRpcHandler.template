@@ -1,0 +1,32 @@
+/**
+*
+*
+*
+* **/
+
+using System;
+using System.Threading.Tasks;
+using ETModel;
+
+namespace ETHotfix
+{
+	[ActorMessageHandler(AppType.{{AppType}})]
+	public class {{HandlerName}} : AMActorRpcHandler<{{EntityName}}, {{ProtoReuestName}}, {{ProtoResponseName}}>
+	{
+		protected override async void Run({{EntityName}} {{SmallEntityName}}, {{ProtoReuestName}} message, Action<{{ProtoResponseName}}> reply)
+		{	
+			{{ProtoResponseName}} response = new {{ProtoResponseName}}();
+			
+			try
+			{
+				await Task.CompletedTask;
+				reply(response);
+			}
+			catch (Exception e)
+			{
+				ReplyError(response, e, reply);
+			}
+					
+		}
+	}//class_end
+}

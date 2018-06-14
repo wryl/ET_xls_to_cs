@@ -1,0 +1,11 @@
+	[Message(HotfixOpcode.{{sh|get_action_fullname(is_offset)}})]
+	[ProtoContract]
+	public partial class {{sh|get_action_fullname(is_offset)}}: IActorResponse
+	{
+		[ProtoMember(90, IsRequired = true)]
+		public int RpcId { get; set; }
+		[ProtoMember(91, IsRequired = true)]
+		public int Error { get; set; }
+		[ProtoMember(92, IsRequired = true)]
+		public string Message { get; set; }
+	}

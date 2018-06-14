@@ -1,0 +1,7 @@
+	[Message(HotfixOpcode.{{sh|get_action_fullname(is_offset)}})]
+	[ProtoContract]
+	public partial class {{sh|get_action_fullname(is_offset)}}: {% if sh[6]|int ==0 %}IMessage{% else %}IRequest{% endif %}
+	{
+		[ProtoMember(90, IsRequired = true)]
+		public int RpcId { get; set; }
+	}

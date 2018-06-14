@@ -1,0 +1,9 @@
+	[Message({{sh|get_action_fullname(is_offset)}})]
+	[ProtoContract]
+	public partial class {{sh|get_action_fullname(is_offset)}}: {% if sh[6]|int ==0 %}IActorMessage{% else %}IActorRequest{% endif %}
+	{
+		[ProtoMember(90, IsRequired = true)]
+		public int RpcId { get; set; }
+        [ProtoMember(93, IsRequired = true)]
+		public long ActorId { get; set; }
+	}

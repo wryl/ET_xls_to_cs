@@ -1,0 +1,21 @@
+/**
+*
+*
+*
+* **/
+
+using System.Threading.Tasks;
+using ETModel;
+
+namespace ETHotfix
+{
+	[ActorMessageHandler(AppType.{{AppType}})]
+	public class {{HandlerName}} : AMActorHandler<{{EntityName}}, {{ProtoReuestName}}>
+	{
+		protected override async Task Run({{EntityName}} {{SmallEntityName}}, {{ProtoReuestName}} message}})
+		{
+			 await Task.CompletedTask;
+		}
+		
+	}//class_end
+}
